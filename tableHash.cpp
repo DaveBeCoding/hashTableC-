@@ -4,7 +4,6 @@
 #include "tableHash.h"
 using namespace std;
 
-
 hashTable::hashTable(){
     for(int i = 0; i < tableSize; i++){
         h_table[i] = new item;
@@ -18,13 +17,11 @@ int hashTable::Hash(string key){
     int hash = 0;   
     int index;
     for (int i = 0; i < key.length(); i++){
-        hash = (hash + (int)key[i]) * 32; // orig hash + (int)key[i]
+        hash = (hash + (int)key[i]); //* 32; // orig hash + (int)key[i]
     }
     index = hash % tableSize;
     return index;
 }//end hashtable
-
-
 
 void hashTable::AddItem(string name, string book){
     int index = Hash(name);

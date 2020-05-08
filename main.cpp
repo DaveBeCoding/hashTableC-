@@ -4,7 +4,6 @@
 using namespace std;
 #include "tableHash.cpp"
 
-
 int main(int argc, char* argv[]){
     hashTable hash_table;
     string name = "";
